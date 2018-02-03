@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='libraryApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Library reworked with Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+    <script src='library.module.js'></script>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" name="button">New Book</button>
+      <div class="row">
+        <div class="col-sm-10 col-xs-10">
+          <section>
+            <form name='bookForm'>
+              <input ng-model='book.title' type="text" name="Title" placeholder="book title goes here"><br>
+              <input ng-model='book.author' type="text" name="Author" placeholder="name of author"><br>
+              <input ng-model='book.pages' type="text" name="Pages" placeholder="number of pages"><br>
+              <select ng-model='book.haveRead'>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <blockquote>
+                {{book.title}} <br>
+                {{book.author}} <br>
+                {{book.pages}} <br>
+                {{book.haveRead}}
+              </blockquote>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
