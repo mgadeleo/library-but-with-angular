@@ -1,0 +1,19 @@
+<form name='bookForm' ng-submit='bookCtrl.addBook(book)'>
+  Title: <input ng-model='book.title' type="text" placeholder="book title goes here"><br>
+  Author: <input ng-model='book.author' type="text" placeholder="name of author"><br>
+  Pages: <input ng-model='book.pages' type="text" placeholder="number of pages"><br>
+  Have read: <select ng-model='book.haveRead'>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+  <br>
+  <input type="submit" value="Add Book"/>
+</form>
+<br>
+<br>
+<blockquote>
+  {{book.title}} <br>
+  {{book.author}} <br>
+  {{book.pages}} <br>
+  {{book.haveRead}}
+</blockquote>
